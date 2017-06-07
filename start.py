@@ -9,6 +9,7 @@ train = mx.io.MNISTIter(
 )
 
 # 声明两层的MLP
+# 在这里的堆叠也很像是keras中的函数式贯序模型
 data = mx.symbol.Variable('data')
 fc1  = mx.symbol.FullyConnected(data= data, num_hidden=128)
 act1 = mx.symbol.Activation(data= fc1, act_type="relu")
